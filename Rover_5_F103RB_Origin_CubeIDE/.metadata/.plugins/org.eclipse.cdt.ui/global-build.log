@@ -1,0 +1,34 @@
+12:00:06 **** Incremental Build of configuration Debug for project Robot3_F103RB_origin ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/usart.o"
+../Core/Src/main.c: In function 'ACS':
+../Core/Src/main.c:826:12: warning: comparison between 'volatile enum MODE' and 'enum ETAT' [-Wenum-compare]
+   if (Mode == ACTIF )
+            ^~
+../Core/Src/main.c: In function 'regulateur':
+../Core/Src/main.c:944:12: warning: comparison between 'volatile enum MODE' and 'enum ETAT' [-Wenum-compare]
+   if (Mode == ACTIF)
+            ^~
+arm-none-eabi-gcc -o "Robot3_F103RB_origin.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\marques\Documents\Mes_Softs\ARM_Cortex\Rover_5_F103RB_Origin_CubeIDE\Robot3_F103RB_origin\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Robot3_F103RB_origin.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Robot3_F103RB_origin.elf
+ 
+arm-none-eabi-size   Robot3_F103RB_origin.elf 
+arm-none-eabi-objdump -h -S  Robot3_F103RB_origin.elf  > "Robot3_F103RB_origin.list"
+arm-none-eabi-objcopy  -O binary  Robot3_F103RB_origin.elf  "Robot3_F103RB_origin.bin"
+   text	   data	    bss	    dec	    hex	filename
+  21644	     20	   2100	  23764	   5cd4	Robot3_F103RB_origin.elf
+Finished building: default.size.stdout
+ 
+Finished building: Robot3_F103RB_origin.bin
+ 
+Finished building: Robot3_F103RB_origin.list
+ 
+12:02:55 **** Incremental Build of configuration Debug for project Robot3_F103RB_origin ****
+make -j8 all 
+arm-none-eabi-size   Robot3_F103RB_origin.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21644	     20	   2100	  23764	   5cd4	Robot3_F103RB_origin.elf
+Finished building: default.size.stdout
+ 

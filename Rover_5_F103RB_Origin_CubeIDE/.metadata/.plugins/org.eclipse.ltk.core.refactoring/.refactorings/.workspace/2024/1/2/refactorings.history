@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 3 resources" deleteContents="true" description="Delete 3 resources" element1="/Rover_5_F103RB_Origin_CubeIDE.zip_expanded" element2="/RemoteSystemsTempFiles" element3="/Robot3_F103RB_origin" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="3" stamp="1704718906882"/>
+</session>
